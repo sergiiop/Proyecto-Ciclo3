@@ -18,5 +18,4 @@ function checkCorreo(valor) {
       return false;
     }
   }
-    this.submit();
 }
