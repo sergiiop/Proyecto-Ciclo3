@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registro</title>
     <link rel="stylesheet" href="estilos.css" />
+    <script src="form.js"></script>
   </head>
   <body class="register-body">
     <section class="register-section">
       <h1>Registro</h1>
-      <form method="post" id="form-registro">
+      <form method="post" id="form-registro" onsubmit="return checkNombre(nombre)">
         <div class="txt_field">
           <input type="text" required id="nombre"/>
           <span></span>

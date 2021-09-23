@@ -1,3 +1,54 @@
+function checkNombre (valor) {
+    let isValid = false;
+    const condicion = new RegExp('^[A-Záéíóú -ñ.]+$', 'i');
+    // Si input esta vacio entonces no es valido
+    if(valor.length == 0) {
+      isValid = false;
+    } else {
+      // Si input no está entre 4 y 30 caracteres no es válido
+      if(valor.length > 30 || valor.length < 4) {
+        isValid = false;
+      } else {
+        if(!condicion.test(valor)){ 
+          isValid = false;
+        } else {
+            isValid = true;
+        }
+      }
+    }
+    return isValid;
+}
+
+function checkApellido (valor) {
+    let isValid = false;
+    const condicion = new RegExp('^[A-Záéíóú -ñ.]+$', 'i');
+    // Si input esta vacio entonces no es valido
+    if(valor.length == 0) {
+      isValid = false;
+    } else {
+      // Si input no está entre 4 y 30 caracteres no es válido
+      if(valor.length > 30 || valor.length < 4) {
+        isValid = false;
+      } else {
+        if(!condicion.test(valor)){ 
+          isValid = false;
+        } else {
+            isValid = true;
+        }
+      }
+    }
+    return isValid;
+}
+
+function checkTelefono(valor) {
+    let numbers = /^[0-9]+$/;
+    if (numbers.test(valor) && valor.length == 7) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 function checkCorreo(valor) {
   //regex: regular expression
   //El código que sigue implementa por un lado el regex oficial y el regex extraoficial que permite caracteres latinos tales como la ñ.
@@ -20,14 +71,6 @@ function checkCorreo(valor) {
   }
 }
 
-function checkTelefono(valor) {
-    let numbers = /^[0-9]+$/;
-    if (numbers.test(valor) && valor.length == 7) {
-        return true;
-    } else {
-        return false;
-    }
-}
 function checkContrasena(valor) {
   let myregex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{8,}$/;
   if (myregex.test(valor)) {
@@ -38,7 +81,9 @@ function checkContrasena(valor) {
 }
 
 module.exports = {
-  checkContrasena,
+  checkNombre,
+  checkApellido,
   checkTelefono,
-  checkCorreo
+  checkCorreo,
+  checkContrasena,
 };
