@@ -6,33 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registro</title>
     <link rel="stylesheet" href="estilos.css" />
+    <script src="form.js"></script>
   </head>
   <body class="register-body">
     <section class="register-section">
       <h1>Registro</h1>
-      <form method="post" id="form-registro">
+      <form method="post" id="form-registro" onsubmit="return checkNombre(nombre)">
         <div class="txt_field">
-          <input type="text" required />
+          <input type="text" required id="nombre"/>
           <span></span>
           <label>Nombre</label>
         </div>
         <div class="txt_field">
-          <input type="text" required />
+          <input type="text" required id="apellido"/>
           <span></span>
           <label>Apellido</label>
         </div>
         <div class="txt_field">
-          <input type="text" required />
+          <input type="text" required id="telefono"/>
           <span></span>
           <label>Teléfono</label>
         </div>
         <div class="txt_field">
-          <input type="email" required />
+          <input type="email" required id="correo"/>
           <span></span>
           <label>Correo</label>
         </div>
         <div class="txt_field">
-          <input type="password" required />
+          <input type="password" required id="contraseña" />
           <span></span>
           <label>Contraseña</label>
         </div>
