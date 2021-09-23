@@ -50,9 +50,9 @@ function checkTelefono(valor) {
 }
 
 function checkContrasena(valor) {
-  let myregex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{8,}$/;
+  //let myregex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{8,}$/;
   // acepta caracteres especiales
-  //let myregex = /^(?=.{8,}$)(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$/;
+  let myregex = /^(?=.{8,}$)(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$/;
   if (myregex.test(valor)) {
     return true;
   } else {
