@@ -11,38 +11,35 @@
   <body class="register-body">
     <section class="register-section">
       <h1>Registro</h1>
-      <form method="post" id="form-registro" onsubmit="return checkNombre(nombre)">
+      <form method="post" id="form-registro">
         <div class="txt_field">
-          <input type="text" required id="nombre"/>
+          <input type="text" id="nombre" />
           <span></span>
           <label>Nombre</label>
         </div>
         <div class="txt_field">
-          <input type="text" required id="apellido"/>
+          <input type="text" id="apellido" />
           <span></span>
           <label>Apellido</label>
         </div>
         <div class="txt_field">
-          <input type="text" required id="telefono"/>
+          <input type="text" id="telefono" />
           <span></span>
           <label>Teléfono</label>
         </div>
         <div class="txt_field">
-          <input type="email" required id="correo"/>
+          <input type="email" id="correo" />
           <span></span>
           <label>Correo</label>
         </div>
         <div class="txt_field">
-          <input type="password" required id="contraseña" />
+          <input type="password" id="contraseña" />
           <span></span>
           <label>Contraseña</label>
         </div>
-        <input
-          type="submit"
-          value="Register"
-          class="btn-grad"
-          id="btn-submit-form"
-        />
+        <button type="button" class="btn-grad" onclick="validationForm()">
+          Register
+        </button>
       </form>
     </section>
   </body>
