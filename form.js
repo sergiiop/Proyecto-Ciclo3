@@ -12,8 +12,6 @@ function checkNombre (valor) {
           isValid = false;
         } else {
             isValid = true;
-            
-            
         }
       }
     }
