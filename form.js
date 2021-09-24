@@ -1,13 +1,13 @@
-function checkNombre (valor) {
-    let isValid = false;
-    const condicion = new RegExp('^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$');
+function checkNombre(valor) {
+  let isValid = false;
+  const condicion = new RegExp('^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$');
 
-    if(valor.length == 0) {
+  if (valor.length == 0) {
+    isValid = false;
+  } else {
+    if (valor.length > 30 || valor.length < 4) {
       isValid = false;
     } else {
-      if (valor.length > 30 || valor.length < 4) {
-      isValid = false;
-      } else {
       if (!condicion.test(valor)) {
         isValid = false;
       } else {
@@ -17,28 +17,27 @@ function checkNombre (valor) {
   }
   return isValid;
 }
-        
 
-function checkApellido (valor) {
+function checkApellido(valor) {
   let isValid = false;
   const condicion = new RegExp('^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$');
 
-  if(valor.length == 0) {
+  if (valor.length == 0) {
     isValid = false;
   } else {
-    if(valor.length > 30 || valor.length < 4) {
+    if (valor.length > 30 || valor.length < 4) {
       isValid = false;
     } else {
-      if(!condicion.test(valor)){ 
+      if (!condicion.test(valor)) {
         isValid = false;
       } else {
-          isValid = true;
+        isValid = true;
       }
     }
   }
   return isValid;
 }
-          
+
 function checkTelefono(valor) {
   let numbers = /^[0-9]+$/;
   if (numbers.test(valor) && valor.length == 7) {
@@ -48,10 +47,9 @@ function checkTelefono(valor) {
   }
 }
 
-function checkContrasena() {
+function checkContrasena(valor) {
   const myregex = /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])([^\s]){8,}$/gm;
-  const validPass = document.getElementById('password');
-  if (myregex.test(validPass.value)) {
+  if (myregex.test(valor)) {
     return true;
   } else {
     return false;
