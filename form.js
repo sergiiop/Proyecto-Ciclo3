@@ -1,14 +1,13 @@
-function checkNombre(valor) {
-  let isValid = false;
-  const condicion = new RegExp('^[A-Záéíóú -ñ.]+$', 'i');
-  // Si input esta vacio entonces no es valido
-  if (valor.length == 0) {
-    isValid = false;
-  } else {
-    // Si input no está entre 4 y 30 caracteres no es válido
-    if (valor.length > 30 || valor.length < 4) {
+function checkNombre (valor) {
+    let isValid = false;
+    const condicion = new RegExp('^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$');
+
+    if(valor.length == 0) {
       isValid = false;
     } else {
+      if (valor.length > 30 || valor.length < 4) {
+      isValid = false;
+      } else {
       if (!condicion.test(valor)) {
         isValid = false;
       } else {
@@ -18,28 +17,28 @@ function checkNombre(valor) {
   }
   return isValid;
 }
+        
 
-function checkApellido(valor) {
+function checkApellido (valor) {
   let isValid = false;
-  const condicion = new RegExp('^[A-Záéíóú -ñ.]+$', 'i');
-  // Si input esta vacio entonces no es valido
-  if (valor.length == 0) {
+  const condicion = new RegExp('^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$');
+
+  if(valor.length == 0) {
     isValid = false;
   } else {
-    // Si input no está entre 4 y 30 caracteres no es válido
-    if (valor.length > 30 || valor.length < 4) {
+    if(valor.length > 30 || valor.length < 4) {
       isValid = false;
     } else {
-      if (!condicion.test(valor)) {
+      if(!condicion.test(valor)){ 
         isValid = false;
       } else {
-        isValid = true;
+          isValid = true;
       }
     }
   }
   return isValid;
 }
-
+          
 function checkTelefono(valor) {
   let numbers = /^[0-9]+$/;
   if (numbers.test(valor) && valor.length == 7) {
@@ -49,11 +48,10 @@ function checkTelefono(valor) {
   }
 }
 
-function checkContrasena(valor) {
-  //let myregex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{8,}$/;
-  // acepta caracteres especiales
-  let myregex = /^(?=.{8,}$)(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$/;
-  if (myregex.test(valor)) {
+function checkContrasena() {
+  const myregex = /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])([^\s]){8,}$/gm;
+  const validPass = document.getElementById('password');
+  if (myregex.test(validPass.value)) {
     return true;
   } else {
     return false;
