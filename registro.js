@@ -1,20 +1,18 @@
-const arrayGlobal = [];
-
 const agregarRegistro = () => {
   const nombre = document.getElementById('nombre').value;
   const apellido = document.getElementById('apellido').value;
   const telefono = document.getElementById('telefono').value;
   const correo = document.getElementById('correo').value;
   const contraseña = document.getElementById('contraseña').value;
-  
+
   const arrayForm = [];
-  
+
   const checkFunctionNombre = checkNombre(nombre);
   const checkFunctionApellido = checkApellido(apellido);
   const checkFunctionTelefono = checkTelefono(telefono);
   const checkFunctionCorreo = checkCorreo(correo);
   const checkFunctionContraseña = checkContrasena(contraseña);
-  
+
   if (
     checkFunctionNombre &&
     checkFunctionApellido &&
@@ -24,7 +22,7 @@ const agregarRegistro = () => {
   ) {
     arrayForm.push(nombre, apellido, telefono, correo, contraseña);
     console.log(arrayForm);
-    arrayGlobal.push(arrayForm);
+    return arrayForm;
   } else {
     console.log('Error en el formulario');
     if (!checkFunctionNombre) {
@@ -43,7 +41,6 @@ const agregarRegistro = () => {
       console.log('Error en la contraseña');
     }
   }
-  console.log(arrayGlobal);
 };
 
 function Comparator(a, b) {
@@ -56,16 +53,16 @@ const ordenarArreglo = (arreglo) => {
   arreglo.sort(Comparator);
   console.log(arreglo);
   return arreglo;
-}
+};
 
 const filtrarCorreo = (arreglo) => {
   let filtroPorCorreo = [];
-    for (i in arreglo){
-        if (arreglo[i][3].includes("@gmail.com")){
-            filtroPorCorreo.push(arreglo[i]);    
-        }
+  for (i in arreglo) {
+    if (arreglo[i][3].includes('@gmail.com')) {
+      filtroPorCorreo.push(arreglo[i]);
     }
-    return filtroPorCorreo;
+  }
+  return filtroPorCorreo;
 };
 
 module.exports = {
