@@ -62,6 +62,7 @@ const filtrarCorreo = (arreglo) => {
       filtroPorCorreo.push(arreglo[i]);
     }
   }
+  console.log(filtroPorCorreo);
   return filtroPorCorreo;
 };
 
