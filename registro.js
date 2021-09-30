@@ -6,12 +6,15 @@ const agregarRegistro = () => {
   const telefono = document.getElementById('telefono').value;
   const correo = document.getElementById('correo').value;
   const contraseña = document.getElementById('contraseña').value;
+  
   const arrayForm = [];
+  
   const checkFunctionNombre = checkNombre(nombre);
   const checkFunctionApellido = checkApellido(apellido);
   const checkFunctionTelefono = checkTelefono(telefono);
   const checkFunctionCorreo = checkCorreo(correo);
   const checkFunctionContraseña = checkContrasena(contraseña);
+  
   if (
     checkFunctionNombre &&
     checkFunctionApellido &&
@@ -43,10 +46,20 @@ const agregarRegistro = () => {
   console.log(arrayGlobal);
 };
 
-const ordenarArreglo = (arreglo) => {};
+function Comparator(a, b) {
+  if (a[1] < b[1]) return -1;
+  if (a[1] > b[1]) return 1;
+  return 0;
+}
+
+const ordenarArreglo = (arreglo) => {
+  arreglo.sort(Comparator);
+  console.log(arreglo);
+  return arreglo;
+}
 
 const filtrarCorreo = (arreglo) => {
-  let filtroPorCorreo =[];
+  let filtroPorCorreo = [];
     for (i in arreglo){
         if (arreglo[i][3].includes("@gmail.com")){
             filtroPorCorreo.push(arreglo[i]);    
