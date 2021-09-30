@@ -1,3 +1,5 @@
+const arreglo = [];
+
 const agregarRegistro = () => {
   const nombre = document.getElementById('nombre').value;
   const apellido = document.getElementById('apellido').value;
@@ -21,8 +23,9 @@ const agregarRegistro = () => {
     checkFunctionContraseña
   ) {
     arrayForm.push(nombre, apellido, telefono, correo, contraseña);
-    console.log(arrayForm);
-    return arrayForm;
+    console.log(`Registros agregados correctamente: ${arrayForm}`);
+    arreglo.push(arrayForm);
+    console.log(`Registros totales: ${arreglo}`);
   } else {
     console.log('Error en el formulario');
     if (!checkFunctionNombre) {
@@ -58,7 +61,7 @@ const ordenarArreglo = (arreglo) => {
 const filtrarCorreo = (arreglo) => {
   let filtroPorCorreo = [];
   for (i in arreglo) {
-    if (arreglo[i][3].includes('@gmail.com')) {
+    if (arreglo[i][3].includes('gmail.com')) {
       filtroPorCorreo.push(arreglo[i]);
     }
   }

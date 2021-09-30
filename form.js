@@ -80,48 +80,48 @@ function checkCorreo(valor) {
   }
 }
 
-const validationForm = () => {
-  const nombre = document.getElementById('nombre').value;
-  const apellido = document.getElementById('apellido').value;
-  const telefono = document.getElementById('telefono').value;
-  const correo = document.getElementById('correo').value;
-  const contraseña = document.getElementById('contraseña').value;
+// const validationForm = () => {
+//   const nombre = document.getElementById('nombre').value;
+//   const apellido = document.getElementById('apellido').value;
+//   const telefono = document.getElementById('telefono').value;
+//   const correo = document.getElementById('correo').value;
+//   const contraseña = document.getElementById('contraseña').value;
 
-  if (checkNombre(nombre)) {
-    console.log(nombre);
-  } else {
-    console.log('Error en el nombre');
-  }
+//   if (checkNombre(nombre)) {
+//     console.log(nombre);
+//   } else {
+//     console.log('Error en el nombre');
+//   }
 
-  if (checkApellido(apellido)) {
-    console.log(apellido);
-  } else {
-    console.log('Error en el apellido');
-  }
+//   if (checkApellido(apellido)) {
+//     console.log(apellido);
+//   } else {
+//     console.log('Error en el apellido');
+//   }
 
-  if (checkTelefono(telefono)) {
-    console.log(telefono);
-  } else {
-    console.log('Error en el telefono');
-  }
+//   if (checkTelefono(telefono)) {
+//     console.log(telefono);
+//   } else {
+//     console.log('Error en el telefono');
+//   }
 
-  if (checkCorreo(correo)) {
-    console.log(correo);
-  } else {
-    console.log('Error en el correo ');
-  }
+//   if (checkCorreo(correo)) {
+//     console.log(correo);
+//   } else {
+//     console.log('Error en el correo ');
+//   }
 
-  if (checkContrasena(contraseña)) {
-    console.log(contraseña);
-  } else {
-    console.log('Error en el contraseña');
-  }
-};
-
-// module.exports = {
-//   checkNombre,
-//   checkApellido,
-//   checkTelefono,
-//   checkCorreo,
-//   checkContrasena,
+//   if (checkContrasena(contraseña)) {
+//     console.log(contraseña);
+//   } else {
+//     console.log('Error en el contraseña');
+//   }
 // };
+
+module.exports = {
+  checkNombre,
+  checkApellido,
+  checkTelefono,
+  checkCorreo,
+  checkContrasena,
+};
