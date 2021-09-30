@@ -6,12 +6,15 @@ const agregarRegistro = () => {
   const telefono = document.getElementById('telefono').value;
   const correo = document.getElementById('correo').value;
   const contraseña = document.getElementById('contraseña').value;
+  
   const arrayForm = [];
+  
   const checkFunctionNombre = checkNombre(nombre);
   const checkFunctionApellido = checkApellido(apellido);
   const checkFunctionTelefono = checkTelefono(telefono);
   const checkFunctionCorreo = checkCorreo(correo);
   const checkFunctionContraseña = checkContrasena(contraseña);
+  
   if (
     checkFunctionNombre &&
     checkFunctionApellido &&
@@ -54,6 +57,16 @@ const ordenarArreglo = (arreglo) => {
   console.log(arreglo);
   return arreglo;
 }
+
+const filtrarCorreo = (arreglo) => {
+  let filtroPorCorreo = [];
+    for (i in arreglo){
+        if (arreglo[i][3].includes("@gmail.com")){
+            filtroPorCorreo.push(arreglo[i]);    
+        }
+    }
+    return filtroPorCorreo;
+};
 
 module.exports = {
   agregarRegistro,
