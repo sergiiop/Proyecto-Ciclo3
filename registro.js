@@ -45,7 +45,15 @@ const agregarRegistro = () => {
 
 const ordenarArreglo = (arreglo) => {};
 
-const filtrarCorreo = (arreglo) => {};
+const filtrarCorreo = (arreglo) => {
+  let filtroPorCorreo =[];
+    for (i in arreglo){
+        if (arreglo[i][3].includes("@gmail.com")){
+            filtroPorCorreo.push(arreglo[i]);    
+        }
+    }
+    return filtroPorCorreo;
+};
 
 module.exports = {
   agregarRegistro,
