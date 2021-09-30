@@ -43,9 +43,17 @@ const agregarRegistro = () => {
   console.log(arrayGlobal);
 };
 
-const ordenarArreglo = (arreglo) => {};
+function Comparator(a, b) {
+  if (a[1] < b[1]) return -1;
+  if (a[1] > b[1]) return 1;
+  return 0;
+}
 
-const filtrarCorreo = (arreglo) => {};
+const ordenarArreglo = (arreglo) => {
+  myArray = arreglo.sort(Comparator);
+  console.log(myArray);
+  return myArray;
+}
 
 module.exports = {
   agregarRegistro,
