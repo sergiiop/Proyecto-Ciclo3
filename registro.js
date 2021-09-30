@@ -50,9 +50,9 @@ function Comparator(a, b) {
 }
 
 const ordenarArreglo = (arreglo) => {
-  myArray = arreglo.sort(Comparator);
-  console.log(myArray);
-  return myArray;
+  arreglo.sort(Comparator);
+  console.log(arreglo);
+  return arreglo;
 }
 
 module.exports = {
