@@ -1,1 +1,1 @@
-select nombre, apellido, telefono from Usuarios order by telefono DESC
+select nombre, apellido, telefono from Usuarios order by telefono DESC;
