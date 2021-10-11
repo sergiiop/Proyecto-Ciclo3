@@ -81,6 +81,13 @@ body {
     align-items: center;
 }
 
+.perfil>.options-sector>.options-descri-help>img {
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    align-items: center;
+}
+
 .perfil>.options-sector>.options-descri-help {
     width: 20px;
     height: 20px;
