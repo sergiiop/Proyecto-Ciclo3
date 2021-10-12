@@ -76,7 +76,7 @@ body {
 
 .perfil>.options-sector> {
     width: 300px;
-    display: flex
+    display: flex;
 }
 
 .perfil>.options-sector>.options-descri {
@@ -132,17 +132,57 @@ body {
     border-radius: 4px;
 }
 
-.carts-style {
-    background-color: rgb(143, 158, 228);
-    margin: 15px;
-    width: 230px;
-    height: 100px;
+.conteiner-info {
+    height: 60%;
+    width: 50%;
+    background-color: #ccc;
+    margin-left: 15px;
+    margin-top: 35px;
     border-radius: 6px;
 }
 
-.carts-style img {
+.conteiner-info>p {
+    padding: 5px;
+    margin: 5px;
+    text-align: left;
+    word-spacing: 2px;
+}
+
+.container-foto {
+    height: 40%;
+    width: 40%;
+    background-color: #ccc;
+    margin-right: 10px;
+    margin-top: 35px;
+    border-radius: 6px;
+}
+
+.container-foto>h4 {
+    text-decoration: none;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.container-foto>p {
+    margin: 2.1px;
+    text-align: left;
+}
+
+.fotoid {
     width: 100%;
     height: 60%;
-    background-color: #ccc;
-    border-radius: 6px 0px;
+    background-color: rgb(74, 97, 202);
+    border-radius: 6px 6px 0 0;
+}
+
+.fotoid img {
+    width: 100%;
+    height: 100%;
+}
+
+.container-detais {
+    background-color: rgb(119, 41, 41);
+    margin-left: 15px;
+    margin-top: 15px;
+    border-radius: 6px;
 }
