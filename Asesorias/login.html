@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="estilos.css" />
   </head>
   <body>
-    <!--sección del menú horizontal -->
+    <div class="fondo">  
+      <!--sección del menú horizontal -->
     <section class="menu-section">
       <button type="button" class="btn-menu-hor" onclick="goTo()">
         Inicio
@@ -25,7 +26,7 @@
     </section>
     <!--sección del ingreso de datos para login -->
     <section class="login-section">
-      <img src="img/imgperfil.jpeg" alt="Perfil Personal" class="imgperfil">
+      <img src="img/imglogin.png" alt="Perfil Personal" id="imglogin">
           <form method="post" id="form-registro" >
           <div class="txt_field">
             <input type="email" required id="correo" />
@@ -40,13 +41,16 @@
           <button type="button" class="btn-grad" onclick="agregarRegistro()">
             Entrar
           </button>
+          <a href="https://www.vecteezy.com/free-vector/key" class="atribution">Key Vectors by Vecteezy</a>
         </form>
       
-      <script src="registro.js"></script>
+      <script src="login.js"></script>
       <script src="form.js"></script>
       
     </section>
+    </div>div>
   </body>
+  
 </html>
 
   

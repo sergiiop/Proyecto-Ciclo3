@@ -105,12 +105,25 @@ form .txt_field {
   text-decoration: none;
 }
 
-.imgperfil{
-  width: 10vw;
-  height: 18vh;
+#imgperfil{
+  width: 25vh;
   position: absolute;
-  margin: 4vh 0 0 20vh;   
+  margin: 10px 0 0 110px;   
   }
+
+#imglogin{
+  width: 30vh;
+  position: absolute;
+  margin: 20px 0 0 110px;   
+  }
+
+.atribution {
+  color: black;
+  font-family: 'Lucida Sans';
+  font-size: x-small;
+  position: absolute;
+  
+}
 
 
 .login-section {
@@ -152,4 +165,89 @@ form .txt_field {
   border: none;
   border-radius: 10px;
   box-shadow: 0 0 20px rgb(2, 77, 8);
+}
+
+#banner {
+  width: auto;
+  height: 200vh;
+  background-image: linear-gradient(to right, #a8e774 0%, #3a60db 100%);
+  }
+
+.sect-reg-asesoria {
+  font-family: 'Arial', monospace;
+  font-weight: bold;
+  height: 90vh;
+  width: 60vh;
+  overflow: hidden;
+  position: absolute;
+  top: 60%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
+form .txt_field_long {
+  position: relative;
+  margin: 30px 0;
+}
+
+.txt_field_long input {
+  width: 100%;
+  padding: 0 5px;
+  height: 100px;
+  font-size: 16px;
+  background: linear-gradient(to left, #b9cad6 0%, #9bb8eb 100%);
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+
+.txt_field_long label {
+  position: absolute;
+  top: 10%;
+  left: 5px;
+  color: black;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.txt_field_long span::before {
+  content: '';
+  position: absolute;
+  top: 350px;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: #a6c1ee;
+  transition: 0.5s;
+}
+
+.txt_field_long input:focus ~ label,
+.txt_field_long input:valid ~ label {
+  top: -5px;
+  color: black;
+}
+
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before {
+  width: 100%;
+}
+
+.sel-categ{
+  background-color: #a6c1ee;
+  width: 60vh;
+  height: 5vh;
+  padding-top: 2%;
+  padding-left: 10%;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+#img2{
+  width: 50vw;
+  float:left;
+  align-content: flex-start;
+  border-radius: 10px;
+
 }

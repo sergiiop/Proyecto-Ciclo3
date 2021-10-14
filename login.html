@@ -26,7 +26,7 @@
     <!--sección del ingreso de datos para login -->
     <section class="login-section">
       <img src="/img/imgperfil.jpeg" alt="Perfil Personal" class="imgperfil">
-          <form method="post" id="form-registro" >
+        <form method="post" id="form-registro" name="login">
           <div class="txt_field">
             <input type="email" required id="correo" />
             <span></span>
@@ -37,9 +37,15 @@
             <span></span>
             <label>Contraseña</label>
           </div>
-          <button type="button" class="btn-grad" onclick="agregarRegistro()">
+          <button type="button" class="btn-grad" onclick="login()">
             Entrar
           </button>
+          <div class="number" id="captcha">
+            <input type="password" required id="captcha" />
+            <span></span>
+            <label>CAPTCHA</label>
+          </div>
+
         </form>
       
       <script src="registro.js"></script>
