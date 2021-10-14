@@ -3,6 +3,14 @@
   box-sizing: border-box;
 }
 
+.index-body{
+  background-size: contain;
+  background-image: url("img/inicio.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+
 .register-section {
   font-family: 'Arial', monospace;
   font-weight: bold;
@@ -86,14 +94,13 @@ form .txt_field {
   margin: 10px auto;
   padding: 15px 45px;
   text-align: center;
-  text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
   color: black;
   font-weight: bold;
   box-shadow: 0 0 20px #eee;
   border-radius: 10px;
-  display: block;
+  justify-content: space-between;
   cursor: pointer;
   outline: none;
   border: none;
@@ -103,6 +110,10 @@ form .txt_field {
   background-position: right center;
   color: #fff;
   text-decoration: none;
+}
+
+a:link, a:visited, a:active {
+  text-decoration:none;
 }
 
 #imgperfil{
