@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <!--sección del menú horizontal -->
+    <section class="menu-section">
+      <button type="button" class="btn-menu-hor" onclick="goTo()">
+        Inicio
+      </button>
+      <button type="button" class="btn-menu-hor" onclick="goTo()">
+        Asesores
+      </button>
+      <button type="button" class="btn-menu-hor" onclick="goTo()">
+        Temas
+      </button>
+      <button type="button" class="btn-menu-hor" onclick="goTo()">
+        Inicio3
+      </button>
+    </section>
+    <!--sección del ingreso de datos para login -->
+    <section class="login-section">
+      <img src="/img/imgperfil.jpeg" alt="Perfil Personal" class="imgperfil">
+        <form method="post" id="form-registro" name="login">
+          <div class="txt_field">
+            <input type="email" required id="correo" />
+            <span></span>
+            <label>Correo</label>
+          </div>
+          <div class="txt_field">
+            <input type="password" required id="contraseña" />
+            <span></span>
+            <label>Contraseña</label>
+          </div>
+          <button type="button" class="btn-grad" onclick="login()">
+            Entrar
+          </button>
+          <div class="number" id="captcha">
+            <input type="password" required id="captcha" />
+            <span></span>
+            <label>CAPTCHA</label>
+          </div>
+
+        </form>
+      
+      <script src="registro.js"></script>
+      <script src="form.js"></script>
+      
+    </section>
+  </body>
+</html>
+
+  
+    

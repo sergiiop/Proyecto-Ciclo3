@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <img id="img2" src="img/imgregases.jpg">
+    <div id="banner">
+    </div>
+    <section class="sect-reg-asesoria">
+        
+        <form method="post" id="form-reg-asesoria" >
+          
+            <div class="txt_field">
+                <input type="text" required id="asesoria" />
+                <span></span>
+                <label>Nombre de la Asesoría</label>
+              </div>
+              <div class="txt_field">
+                <input type="text" required id="precio" />
+                <span></span>
+                <label>Precio por hora</label>
+              </div>
+              <div class="txt_field_long">
+                <input type="text" required id="descripcion" />
+                <span></span>
+                <label>Descripción</label>
+              </div>
+              <span></span>
+              <div class="sel-categ">                    
+                <label for="categoria" id="cat-label">Seleccione una categoría:</label>
+                <select name="categoria" id="categoria-select" required>
+                    <option value="">--Por favor escoja una--</option>
+                    <option value="math">Matemáticas y Ciencias</option>
+                    <option value="tram">Trámites en Embajadas</option>
+                    <option value="vet">Veterinaria</option>                    
+                </select>                   
+              </div>
+              <span></span>
+                <button type="button" class="btn-grad" onclick="agregarAsesoria()">
+                    Crear Asesoria
+                </button>
+            
+        </form>
+      </div>
+      <script src="reg-asesoria.js"></script>
+      <script src="form.js"></script>
+    </section>
+  </body>
+  <a href="https://www.vecteezy.com/free-vector/key">Key Vectors by Vecteezy</a>
+</html>
